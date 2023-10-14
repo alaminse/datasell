@@ -1,0 +1,79 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,400;1,500;1,600&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+} */
+/*--DASHBOARD CSS--*/
+.dashboard-card{
+     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+     padding: 25px;
+     text-align: center;
+}
+.dashboard-card i{
+    color:#222;
+    font-size: 28px;
+    
+    }
+
+.dashboard-card h5{
+    font-size: 28px;
+    color: #6ACF7B;
+    font-weight: 600;
+}
+.sales-chart{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.table-borderless > tbody > tr > td,
+.table-borderless > tbody > tr > th,
+.table-borderless > tfoot > tr > td,
+.table-borderless > tfoot > tr > th,
+.table-borderless > thead > tr > td,
+.table-borderless > thead > tr > th {
+    border: none!important;
+    padding: 25px 0px!important;
+}
+
+/*---user dashboard--*/
+.user-order-manage h3{
+    color:#000;
+}
+.user-order-manage thead{
+    padding-top: 70px !important;
+}
+.user-order-manage table tr td {
+    color:#000;
+    padding: 25px 0px!important;
+}
+.product-download-btn{
+    background-color:#1CBD9D;
+    color:#fff;
+    padding:8px 20px;
+    text-decoration: none;
+}
+.cancel-product a{
+background-color: #DC3545;
+color: #fff;
+padding: 5px 7px;
+border-radius: 12px;
+font-size: 14px;
+}
+/*--order manage table--*/
+.replace-download-btn{
+    background-color: #31D2F2;
+    color:#fff;
+    padding:8px 20px;
+    text-decoration: none;
+}
+/* .processing{
+    background-color: #36B9CC;
+    color:#fff;
+    border-radius: 30px;
+} */
+.problem-file input{
+    width: 50%;
+}
+.inventory-title{
+    color:#222;
+}
+.invetory-store form label{
+    color: #222;
+}
