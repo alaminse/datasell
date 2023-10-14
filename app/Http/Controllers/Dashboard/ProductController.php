@@ -4,13 +4,15 @@ namespace App\Http\Controllers\Dashboard;
 use App\Models\Product;
 use App\Models\Contact;
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    // public function index(){
-    //     return view('dashboard.addNewProduct');
-    // }
+    public function create(){
+        $categories = Category::all();
+        return view('dashboard.addNewProduct',compact('categories'));
+    }
     public function index()
     {
         $products = Product::get();

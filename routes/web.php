@@ -14,8 +14,7 @@ use App\Http\Controllers\Dashboard\OrderManageController;
 use App\Http\Controllers\Dashboard\InventoryController;
 use App\Http\Controllers\Dashboard\PostControler;
 use App\Http\Controllers\user\UserController;
-
-
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,7 +42,7 @@ Auth::routes();
 
 
 //Dashboad Route
-Route::group(['prefix'=>'admin', 'as' => 'admin.','middleware' => ['role:admin']], function () {
+Route::group(['prefix'=>'admin', 'as' => 'admin.'], function () {
 
     Route::resource('categories', CategoryController::class);
 

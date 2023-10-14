@@ -17,13 +17,13 @@
               <div class="col-lg-2">
                   <div class="header-logo">
                       <a href="http://localhost/mailsell/public/"> <img src="{{asset('assets/images/websitelogo.png')}}"/></a>
-                     
+
                   </div>
               </div>
               <div class="col-lg-10">
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid">
-                      
+
                       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                       </button>
@@ -33,7 +33,7 @@
                             <li><a href="http://localhost/mailsell/public/about-us">About</a></li>
                             <li><a href="http://localhost/mailsell/public/blog">Blog</a></li>
                             <li><a href="http://localhost/mailsell/public/contact-us">Contact</a></li>
-                          
+
                         </ul>
                         <div class="header-search">
                             <form action="{{url('/search')}}" method="POST" role="search" class="d-flex">
@@ -43,7 +43,7 @@
                                     <button type="submit">Search</button>
                                 </div>
                             </form>
-                           
+
                         </div>
                         <ul class="top-menu-icon  d-flex ">
                             {{-- <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li> --}}
@@ -54,7 +54,7 @@
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                   <li><a class="dropdown-item" href="{{url('login')}}">Login</a></li>
                                   <li><a class="dropdown-item" href="{{url('register')}}">Register</a></li>
-                                  
+
                                 </ul>
                               </div>
                          </ul>
@@ -117,11 +117,11 @@
         </div>
     </section>
     <!--FOOTER WIDGET END-->
-    
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" ></script>    
-    <script src="{{asset('assets/js/custom.js')}}" ></script>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" ></script>
+    <script src="{{asset('assets/js/custom.js')}}" ></script>
 </body>
 </html>

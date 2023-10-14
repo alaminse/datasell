@@ -39,7 +39,7 @@ color: #2b2b2b;
 }
 .top-menu-icon li a {
     padding: 0px 16px;
-    
+
 }
 .menu-cart{
     position: relative;
@@ -88,7 +88,7 @@ color: #2b2b2b;
 .hero-btns a:first-child{
     background-color: #1CBD9D;
     color: #fff;
-   
+
 }
 .hero-btns a:nth-child(2){
     background-color: #000;
@@ -115,7 +115,7 @@ color: #2b2b2b;
 .service-image img{
     width: 540px;
     height: 360px;
- 
+
 }
 /*--service css end--*/
 /*--Choose area start--*/
@@ -238,7 +238,7 @@ color:#1CBD9D;
     color: #fff;
     padding: 14px 0;
     display: inline-block;
-   
+
 }
 .footer-menu li a i{
     width: 35px;
@@ -249,7 +249,7 @@ color:#1CBD9D;
 }
 .facebok-bg{
     background-color: #39548C;
-    
+
 }
 .twitter-bg{
     background-color: #3CA1DF;
@@ -378,22 +378,22 @@ tbody, td, tfoot, th, thead, tr {
         RESPONSIVE CODE
 ------------------------------*/
 
-@media (max-width: 767.98px) { 
-    
+@media (max-width: 767.98px) {
+
 }
 
 
-@media (max-width: 991.98px) { 
-    
- }
-
-
-@media (max-width: 1199.98px) { 
+@media (max-width: 991.98px) {
 
  }
 
 
-@media (max-width: 1399.98px) { 
+@media (max-width: 1199.98px) {
+
+ }
+
+
+@media (max-width: 1399.98px) {
 
 }
 
