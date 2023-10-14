@@ -42,7 +42,7 @@ Auth::routes();
 
 
 //Dashboad Route
-Route::group(['prefix'=>'admin', 'as' => 'admin.'], function () {
+Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
 
     Route::resource('categories', CategoryController::class);
 
@@ -69,7 +69,7 @@ Route::group(['prefix'=>'admin', 'as' => 'admin.'], function () {
     // Route::get('/product-remove/{id}', [ProductController::class, 'productremove'])->name('product.remove');
 });
 
- Route::group(['prefix'=>'random','middleware' => ['role:admin']], function () {
+Route::group(['prefix' => 'random', 'middleware' => ['role:admin']], function () {
     Route::get('/home', [HomeController::class, 'index'])->name('admin.home');
 
     Route::get('/manage-order', [OrderManageController::class, 'manageorder'])->name('manage.order');
@@ -84,20 +84,18 @@ Route::group(['prefix'=>'admin', 'as' => 'admin.'], function () {
     Route::get('/allcontact', [ProductController::class, 'allcontact'])->name('all.contact');
 });
 
- Route::group(['middleware' => ['role:user']], function () {
-       Route::get('/users', [UserController::class, 'index'])->name('user.index');
-       Route::get('/manageaccount', [UserController::class, 'manageaccount'])->name('manage.account');
-       Route::get('/download-product/{id}', [UserController::class, 'productdownload'])->name('download.product');
-       Route::get('/replace-product/{id}', [UserController::class, 'productreplace'])->name('replace.product');
-       Route::post('/order-store/{id}', [UserController::class, 'orderStore'])->name('order.store');
-       //  Route::post('/problem-file', [UserController::class, 'problemfile'])->name('problem.file');
+Route::group(['middleware' => ['role:user']], function () {
+    Route::get('/users', [UserController::class, 'index'])->name('user.index');
+    Route::get('/manageaccount', [UserController::class, 'manageaccount'])->name('manage.account');
+    Route::get('/download-product/{id}', [UserController::class, 'productdownload'])->name('download.product');
+    Route::get('/replace-product/{id}', [UserController::class, 'productreplace'])->name('replace.product');
+    Route::post('/order-store/{id}', [UserController::class, 'orderStore'])->name('order.store');
+    //  Route::post('/problem-file', [UserController::class, 'problemfile'])->name('problem.file');
 
-        Route::get('/user', [UserController::class, 'index']);
-
-
-  });
+    Route::get('/user', [UserController::class, 'index']);
+});
 //   Route::get('/problemfile', function(){return "hello";});
-Route::post('/file-problem/{id}',[UserController::class, 'problemfile'])->name('problem.file');
+Route::post('/file-problem/{id}', [UserController::class, 'problemfile'])->name('problem.file');
 
 
 
@@ -126,7 +124,3 @@ Route::get('/post-remove/{id}', [PostControler::class, 'postremove'])->name('pos
 //     $role = Role::create(['name' => 'user']);
 //     return $role->name;
 // });
-
-
-
-

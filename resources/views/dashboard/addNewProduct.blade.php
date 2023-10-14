@@ -1,6 +1,5 @@
 @extends('layouts.app')
 @push('css')
-
 @endpush
 @section('content')
     <section>
@@ -16,7 +15,17 @@
             <div class="col-lg-12">
                 <div class="add-product-area">
                     <h2>Add New product</h2>
-                    <form action="" method="POST" enctype="multipart/form-data" class="form form-horizontal mar-top">
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    <form action="{{ route('admin.products.store') }}" method="POST" enctype="multipart/form-data"
+                        class="form form-horizontal mar-top">
                         @csrf
                         <div class="row">
                             <div class="col-lg-6">
@@ -35,10 +44,10 @@
                                         <div class="form-group mb-3">
                                             <label for="cagtegory_id" class="form-label text-dark">Select Category<span
                                                     class="text-danger fs-6">*</span></label>
-                                            <select name="cagtegory_id" id="cagtegory_id" class="form-control">
+                                            <select name="category_id" id="category_id" class="form-control">
                                                 <option selected disabled>Select Category</option>
                                                 @foreach ($categories as $category)
-                                                    <option value="{{ $category->name }}">{{ $category->name }}</option>
+                                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
@@ -65,19 +74,13 @@
                                     <div class="card-body">
                                         <div class="form-group mb-3">
                                             <label for="upload_file" class="form-label text-dark">Upload File</label>
-                                            <div class="input-group">
-                                                <input type="file" class="form-control" id="upload_files"
-                                                    name="upload_files[]" multiple>
-                                                <label class="input-group-text" for="inputGroupFile02">Upload</label>
-                                            </div>
+                                            <input type="file" class="form-control" id="upload_files" name="upload_files"
+                                                multiple>
                                         </div>
 
                                         <div class="form-group mb-3">
                                             <label for="thumbnail" class="form-label text-dark">Thumbnail Image</label>
-                                            <div class="input-group">
-                                                <input type="file" class="form-control" id="thumbnail" name="thumbnail">
-                                                <label class="input-group-text">Upload</label>
-                                            </div>
+                                            <input type="file" class="form-control" id="thumbnail" name="thumbnail">
                                             <span>These images are visible in product details page gallery</span>
                                         </div>
                                     </div>
@@ -117,7 +120,8 @@
                                 <!-- Product price-->
                                 <div class="card mb-4">
                                     <div class="card-header bg-transparent">
-                                        <h5 class="mb-0 text-dark font-weight-semi-bold">Product Price + Discount + Highlight</h5>
+                                        <h5 class="mb-0 text-dark font-weight-semi-bold">Product Price + Discount +
+                                            Highlight</h5>
                                     </div>
                                     <div class="card-body">
                                         <div class="form-group mb-3">
