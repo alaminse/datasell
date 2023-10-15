@@ -6,8 +6,7 @@ use App\Models\Product;
 use App\Models\Contact;
 use App\Models\Post;
 use App\Http\Controllers\Controller;
-
-
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -19,7 +18,8 @@ class HomeController extends Controller
     {
         $products = Product::orderBy('price', 'asc')
             ->paginate(3);
-        return view('frontend.home', compact('products'));
+        $categories = Category::all();
+        return view('frontend.home', compact('products', 'categories'));
     }
 
     /**
