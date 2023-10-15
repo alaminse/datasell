@@ -27,14 +27,18 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-
-Route::get('/', [HomeController::class, 'index']);
-Route::get('/about-us', [HomeController::class, 'aboutUs']);
-Route::get('/contact-us', [HomeController::class, 'contactUs']);
-Route::get('/blog', [HomeController::class, 'blog']);
-Route::get('/singlepost/{slug}', [HomeController::class, 'singlepost'])->name('single.post');
-Route::get('/singleproduct/{id}', [HomeController::class, 'singleProduct'])->name('single.product');
-Route::post('/contact-store', [HomeController::class, 'contactstore'])->name('contact.store');
+/**
+ * Frontent Route
+ */
+Route::prefix('/')->group(function () {
+    Route::get('', [HomeController::class, 'index']);
+    Route::get('about-us', [HomeController::class, 'aboutUs']);
+    Route::get('contact-us', [HomeController::class, 'contactUs']);
+    Route::get('blog', [HomeController::class, 'blog']);
+    Route::get('singlepost/{slug}', [HomeController::class, 'singlepost'])->name('single.post');
+    Route::get('product/details/{slug}', [HomeController::class, 'productDetails'])->name('product.details');
+    Route::post('contact-store', [HomeController::class, 'contactstore'])->name('contact.store');
+});
 
 
 Auth::routes();
